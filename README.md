@@ -66,8 +66,15 @@ You also need to add the locations to your custome modules you want to load and 
 
 ## Included tests
 
-1. ```hello.js ``` This test comes from Colins tutorial and is very simple, the hello world example.
+1. ```tests\hello.js ``` This test comes from Colins tutorial and is very simple, the hello world of intern.
 
-2. ```extent.js``` This test demonstrates using the esri Extent and Point classes from the api.
+2. ```tests\extent.js``` This test demonstrates using the esri Extent and Point classes from the api.
 
-3. ```map.js``` This test demonstrates the async testing method. 
+3. ```tests\map.js``` This test demonstrates the async testing method. This will be the most common test method as most apps and need to wait for objects to load before they can be used. For example ```esri/map```.
+
+4. ```tests\printWidget.js``` This test demonstrates how to use two objects that require waiting until thier on load fires before testing. This also shows how to use the async method a little diffrently than ```map.js``` test. For more info on async tests read [here](https://github.com/theintern/intern/wiki/Writing-Tests#asynchronous-testing).
+
+5. ```tests\functional\index.js``` This test comes from Colins tutorial is is the hello world for functional testing.
+
+## Read the docs
+Intern has docs located in the [wiki](https://github.com/theintern/intern/wiki) of the intern repo. Read them. While not comprehensive it does outline everything needed.
