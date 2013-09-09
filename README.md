@@ -72,7 +72,7 @@ You also need to add the locations to your custom modules you want to load and t
 
 2. ```tests\extent.js``` This test demonstrates using the esri Extent and Point classes from the api.
 
-3. ```tests\map.js``` This test demonstrates the async testing method. This will be the most common test method as most apps and need to wait for objects to load before they can be used. For example ```esri/map```.
+3. ```tests\map.js``` This test demonstrates the async testing method. This will be the most common test method as most apps need to wait for objects to load before they can be used. For example ```esri/map```.
 
 4. ```tests\printWidget.js``` This test demonstrates how to use two objects that require waiting until their on load fires before testing. This also shows how to use the async method a little differently than ```map.js``` test. For more info on async tests read [here](https://github.com/theintern/intern/wiki/Writing-Tests#asynchronous-testing).
 
