@@ -13,10 +13,12 @@ For a fast start, running my example tests, follow these steps:
 
 ### Step 2:
 * install intern-geezer in the root of the project:
+
 ```bash
 cd <path to the tutorial>
 npm install-geezer
 ```
+
 * thats it! your done!
 
 ### Step 3:
