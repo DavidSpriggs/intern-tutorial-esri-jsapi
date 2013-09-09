@@ -27,7 +27,9 @@ npm install intern-geezer
 ```bash
 http://<path to the tutorial>/intern-tutorial-esri-jsapi/node_modules/intern-geezer/client.html?config=tests/intern
 ```
-* you will need to have your console open as this is where the output from intern tests are displayed when using the browser runner (client.html).
+* you will need to have your console open as this is where the output from intern tests are displayed when using the browser runner (client.html). It should look something like this:
+
+![Console output](consoleOutput.jpg) 
 
 ## Important notes:
 
