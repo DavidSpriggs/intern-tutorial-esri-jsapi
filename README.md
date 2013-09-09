@@ -2,7 +2,7 @@
 
 This is a tutorial on using intern to unit/functional test your esri JavaScript API apps.
 
-First off big props to Colin Snover over at sitepen for the intern-tutorial found [here](https://github.com/theintern/intern-tutorial). Colins tutorial was my starting point and helped me get the feel for intern and writing the tests themselves. I highly recommend you read his tutorial first, then coming back here.
+First off big props to Colin Snover over at sitepen for the intern-tutorial found [here](https://github.com/theintern/intern-tutorial). Colins tutorial was my starting point and helped me get the feel for intern and writing the tests themselves. I highly recommend you read his tutorial first, then come back here.
 
 For a fast start running my example tests, follow these steps:
 
