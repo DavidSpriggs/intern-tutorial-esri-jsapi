@@ -16,7 +16,7 @@ For a fast start, running my example tests, follow these steps:
 
 ```bash
 cd <path to the tutorial>
-npm install-geezer
+npm install intern-geezer
 ```
 
 * thats it! your done!
