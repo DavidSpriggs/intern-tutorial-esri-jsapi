@@ -56,6 +56,14 @@ define([
             map.setZoom(14).then(dfd.callback(function() {
                 assert.strictEqual(map.getZoom(), 14, 'map.getZoom() should return 14 after setting level to 14');
             }), dfd.reject.bind(dfd));
+        },
+
+        'Test map zooming (Promises/A)': function() {
+            // do the async action on the map, returning a promise
+            return map.setZoom(14).then(function() {
+                assert.strictEqual(map.getZoom(), 14, 'map.getZoom() should return 14 after setting level to 14');
+            });
         }
+
     });
 });
