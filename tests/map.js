@@ -5,6 +5,7 @@ define([
     'dojo/dom-construct',
     'dojo/_base/window'
 ], function(registerSuite, assert, Map, domConstruct, win) {
+    var map;
     registerSuite({
         name: 'Map zoom',
         // before the suite starts
@@ -30,7 +31,7 @@ define([
         // after the suite is done (all tests)
         teardown: function() {
             map.destroy();
-            delete window.map;
+            // delete window.map;
         },
 
         // the tests, each function is a test
@@ -39,7 +40,7 @@ define([
             var dfd = this.async(5000);
 
             // define callback for on load with our tests
-            var mapReady = function(evt) {
+            var mapReady = function(/*evt*/) {
                 assert.strictEqual(map.getZoom(), 13, 'map.getZoom() should return 13 as defined in map constructor');
             };
 
