@@ -5,7 +5,9 @@ define([
     'dojo/dom-construct',
     'dojo/_base/window'
 ], function(registerSuite, assert, Map, domConstruct, win) {
+    // local vars scoped to this module
     var map;
+
     registerSuite({
         name: 'Map zoom',
         // before the suite starts
@@ -31,7 +33,6 @@ define([
         // after the suite is done (all tests)
         teardown: function() {
             map.destroy();
-            // delete window.map;
         },
 
         // the tests, each function is a test

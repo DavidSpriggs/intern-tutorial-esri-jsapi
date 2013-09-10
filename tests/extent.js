@@ -5,6 +5,9 @@ define([
     'esri/SpatialReference',
     'esri/geometry/Point'
 ], function(registerSuite, assert, Extent, SpatialReference, Point) {
+    // local vars scoped to this module
+    var largeExtent, smallExtent, point;
+
     registerSuite({
         name: 'Extent operations',
         // before the suite starts
@@ -26,9 +29,7 @@ define([
 
         // after the suite is done (all tests)
         teardown: function() {
-            delete window.largeExtent;
-            delete window.smallExtent;
-            delete window.point;
+            // do nothing
         },
 
         // The tests, each function is a test

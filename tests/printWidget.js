@@ -6,6 +6,9 @@ define([
     'esri/map',
     'gis/dijit/Print'
 ], function(registerSuite, assert, domConstruct, win, Map, Print) {
+    // local vars scoped to this module
+    var map, printWidget;
+
     registerSuite({
         name: 'Print Widget',
         // before the suite starts
@@ -40,12 +43,12 @@ define([
             // do nothing
         },
 
-        // after the suite is done (all tests), clean up globals
+        // after the suite is done (all tests)
         teardown: function() {
             map.destroy();
             printWidget.destroy();
-            delete window.map;
-            delete window.printWidget;
+            //delete window.map;
+            //delete window.printWidget;
         },
 
         // the tests, each function is a test
@@ -57,7 +60,7 @@ define([
             var dfd = this.async(10000);
 
             // define callback for map on load with our tests
-            var ready = function(evt) {
+            var ready = function(/*evt*/) {
                 // call the print method which returns a defered, then wrap this tests defered around our tests.
                 printWidget.print().fileHandle.then(function(data) {
                     var re = /^http/i;
@@ -76,7 +79,7 @@ define([
 
             // our dependency counter
             var count = 0;
-            var readyWatch = function(evt) {
+            var readyWatch = function(/*evt*/) {
                 count++;
                 if (count === 2) { //number of deps
                     ready();
