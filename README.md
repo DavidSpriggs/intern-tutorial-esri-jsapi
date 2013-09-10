@@ -8,7 +8,7 @@ For a fast start running my example tests, follow these steps:
 
 ### Step 1:
 * Clone or download this repo.
-* We are going to run our tests with a 'head' (browser) so move or copy the tutorial to a web accessible folder. We will be using the browser test runner so intern needs to be server via a web server to avoid any cross domain errors.
+* We are going to run our tests with a 'head' (browser) so move or copy the tutorial to a web accessible folder. We will be using the browser test runner so intern needs to be served via a web server to avoid any cross domain errors.
 * If you don't have node installed, [install](http://nodejs.org/) it.
 
 ### Step 2:
@@ -84,3 +84,5 @@ You also need to add the locations to your custom modules you want to load and t
 
 ## Read the docs
 Intern has docs located in the [wiki](https://github.com/theintern/intern/wiki) of the intern repo. Read them. While not comprehensive it does outline everything needed.
+
+Chai doc can be found [here](http://chaijs.com/api/).
