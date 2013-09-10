@@ -31,7 +31,7 @@ http://<path to the tutorial>/intern-tutorial-esri-jsapi/node_modules/intern-gee
 
 ![Console output](consoleOutput.jpg) 
 
-## Important notes:
+## Important notes for esri jsapi integration:
 
 The key to making intern work with the esri jsapi is two fold:
 
@@ -42,7 +42,7 @@ The key to making intern work with the esri jsapi is two fold:
 ```javascript
 loader: {
         // Packages that should be registered with the loader in each testing environment
-    	packages: [{
+        packages: [{
 			name: 'app',
 			location: 'app'
 		}, {
@@ -64,7 +64,11 @@ loader: {
 	}
 ```
 
-You also need to add the locations to your custom modules you want to load and test. In the above example 'app' and 'gis' is where we have some modules/app to test.
+You also need to add the locations to your custom modules you want to load and test. In the above example 'app' and 'gis' is where we have some modules to test.
+
+## Important notes for intern usage:
+
+1. Intern-geezer only supports ```intern/chai!assert```. When the esri jsapi moves to 1.8.4 or higher, you can switch to regular intern and take advantage of ```intern/chai!expect``` and ```intern/chai!should```. Esri jsapi 3.6 is based on dojo ```1.8.3``` but 3.7 will be based on dojo ```1.9.1```.
 
 ## Included tests
 
