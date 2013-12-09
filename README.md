@@ -16,6 +16,10 @@ For a fast start running my example tests, follow these steps:
 
 ```bash
 cd <path to the tutorial>
+npm install intern
+```
+and if you wish (to support old IE, optional, see below):
+```bash
 npm install intern-geezer
 ```
 
@@ -25,8 +29,13 @@ npm install intern-geezer
 * Lets run the tests I provided in this tutorial, open a browser and point it here:
 
 ```bash
+http://<path to the tutorial>/intern-tutorial-esri-jsapi/node_modules/intern/client.html?config=tests/intern
+```
+or for intern-geezer:
+```bash
 http://<path to the tutorial>/intern-tutorial-esri-jsapi/node_modules/intern-geezer/client.html?config=tests/intern
 ```
+
 * you will need to have your console open as this is where the output from intern tests are displayed when using the browser runner (client.html). It should look something like this:
 
 ![Console output](consoleOutput.jpg) 
@@ -35,7 +44,7 @@ http://<path to the tutorial>/intern-tutorial-esri-jsapi/node_modules/intern-gee
 
 The key to making intern work with the esri jsapi is two fold:
 
-1. You have to use intern-geezer due to a [bug](https://bugs.dojotoolkit.org/ticket/15616) in dojo 1.8.3 and below. Esri jsapi 3.6 is based on dojo 1.8.3. If your looking to support old IE (8 and below) you need to use intern-geezer anyway.
+1. Intern 1.3 will work with esrijs 3.6 and 3.7. If your app is looking to support old IE (8 and below) you will need to also use intern-geezer. Good news is the intern config will work for both, so you can install intern and intern-geezer side by side and use both by defining different test suites.
 
 2. Defining the intern loader to work with the esri jsapi. Intern uses a local copy of dojo core. As such you need to tell it where to find the esri jsapi. Do this in your intern config file:
 
@@ -43,6 +52,9 @@ The key to making intern work with the esri jsapi is two fold:
 loader: {
         // Packages that should be registered with the loader in each testing environment
         packages: [{
+			name: 'tests',
+			location: 'tests'
+		},{
 			name: 'app',
 			location: 'app'
 		}, {
@@ -50,25 +62,25 @@ loader: {
 			location: 'gis'
 		}, {
 			name: 'esri',
-			location: 'http://js.arcgis.com/3.6/js/esri'
+			location: 'http://js.arcgis.com/3.7/js/esri'
 		}, {
 			name: 'dojo',
-			location: 'http://js.arcgis.com/3.6/js/dojo/dojo'
+			location: 'http://js.arcgis.com/3.7/js/dojo/dojo'
 		}, {
 			name: 'dojox',
-			location: 'http://js.arcgis.com/3.6/js/dojo/dojox'
+			location: 'http://js.arcgis.com/3.7/js/dojo/dojox'
 		}, {
 			name: 'dijit',
-			location: 'http://js.arcgis.com/3.6/js/dojo/dijit'
+			location: 'http://js.arcgis.com/3.7/js/dojo/dijit'
 		}]
 	}
 ```
 
-You also need to add the locations to your custom modules you want to load and test. In the above example 'app' and 'gis' is where we have some modules to test.
+You also need to add the locations to your custom modules you want to load and test. In the above example 'app' and 'gis' is where we have some modules to test. Due to an quirk in the dojo loader, you will also need to register the 'tests' folder as a package, no biggie.
 
 ## Important notes for intern usage:
 
-1. Intern-geezer only supports ```intern/chai!assert```. When the esri jsapi moves to 1.8.4 or higher, you can switch to regular intern and take advantage of ```intern/chai!expect``` and ```intern/chai!should```. Esri jsapi 3.6 is based on dojo ```1.8.3``` but 3.7 will be based on dojo ```1.9.1```.
+1. Intern-geezer only supports ```intern/chai!assert```. When using regular intern, you can take advantage of ```intern/chai!expect``` and ```intern/chai!should```.
 
 ## Included tests
 

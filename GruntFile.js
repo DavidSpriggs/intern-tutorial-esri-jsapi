@@ -1,4 +1,4 @@
-module.exports = function (grunt) {
+module.exports = function(grunt) {
     grunt.initConfig({
         intern: {
             dev: {
@@ -10,5 +10,12 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.loadNpmTasks('intern-geezer');
+    // Loading using a local copy
+    grunt.loadNpmTasks('intern');
+
+    // Register a test task
+    grunt.registerTask('test', ['intern']);
+
+    // By default we just test
+    grunt.registerTask('default', ['test']);
 };

@@ -14,8 +14,8 @@ define([
         // before the suite starts
         setup: function() {
             // load claro & esri css, create a map div in the body, and create the map object and print widget for our tests
-            domConstruct.place('<link rel="stylesheet" type="text/css" href="//js.arcgis.com/3.6/js/dojo/dijit/themes/claro/claro.css">', win.doc.getElementsByTagName("head")[0], 'last');
-            domConstruct.place('<link rel="stylesheet" type="text/css" href="//js.arcgis.com/3.6/js/esri/css/esri.css">', win.doc.getElementsByTagName("head")[0], 'last');
+            domConstruct.place('<link rel="stylesheet" type="text/css" href="//js.arcgis.com/3.7/js/dojo/dijit/themes/claro/claro.css">', win.doc.getElementsByTagName("head")[0], 'last');
+            domConstruct.place('<link rel="stylesheet" type="text/css" href="//js.arcgis.com/3.7/js/esri/css/esri.css">', win.doc.getElementsByTagName("head")[0], 'last');
             domConstruct.place('<div id="map" style="width:300px;height:200px;" class="claro"></div>', win.body(), 'only');
             domConstruct.place('<div id="print" style="width:300px;" class="claro"></div>', win.body(), 'last');
 
@@ -47,8 +47,6 @@ define([
         teardown: function() {
             map.destroy();
             printWidget.destroy();
-            //delete window.map;
-            //delete window.printWidget;
         },
 
         // the tests, each function is a test
@@ -60,7 +58,7 @@ define([
             var dfd = this.async(10000);
 
             // define callback for map on load with our tests
-            var ready = function(/*evt*/) {
+            var ready = function( /*evt*/ ) {
                 // call the print method which returns a defered, then wrap this tests defered around our tests.
                 printWidget.print().fileHandle.then(function(data) {
                     var re = /^http/i;
@@ -79,15 +77,15 @@ define([
 
             // our dependency counter
             var count = 0;
-            var readyWatch = function(/*evt*/) {
+            var readyWatch = function( /*evt*/ ) {
                 count++;
-                if (count === 2) { //number of deps
+                if (count === 1) { //number of deps
                     ready();
                 }
             };
 
             // assign each dependency to call our ready watcher when loaded
-            map.on('load', readyWatch);
+            // map.on('load', readyWatch); // not needed for built-in basemaps
             printWidget.on('load', readyWatch);
         }
     });
