@@ -63,15 +63,15 @@ define({
 	// The desired AMD loader to use when running unit tests (client.html/client.js). Omit to use the default Dojo
 	// loader
 	useLoader: {
-		'host-node': 'http://js.arcgis.com/3.7/',
-		'host-browser': 'http://js.arcgis.com/3.7/'
+		'host-node': 'http://js.arcgis.com/3.8/',
+		'host-browser': 'http://js.arcgis.com/3.8/'
 	},
 
 	// Configuration options for the module loader; any AMD configuration options supported by the Dojo loader can be
 	// used here
 	loader: {
 		// Packages that should be registered with the loader in each testing environment
-		//baseURL: 'http://js.arcgis.com/3.7/js/dojo/dojo',
+		//baseURL: 'http://js.arcgis.com/3.8/js/dojo/dojo',
 		packages: [{
 			name: 'tests',
 			location: 'tests'
@@ -83,16 +83,16 @@ define({
 			location: 'gis'
 		}, {
 			name: 'esri',
-			location: 'http://js.arcgis.com/3.7/js/esri'
+			location: 'http://js.arcgis.com/3.8/js/esri'
 		}, {
 			name: 'dojo',
-			location: 'http://js.arcgis.com/3.7/js/dojo/dojo'
+			location: 'http://js.arcgis.com/3.8/js/dojo/dojo'
 		}, {
 			name: 'dojox',
-			location: 'http://js.arcgis.com/3.7/js/dojo/dojox'
+			location: 'http://js.arcgis.com/3.8/js/dojo/dojox'
 		}, {
 			name: 'dijit',
-			location: 'http://js.arcgis.com/3.7/js/dojo/dijit'
+			location: 'http://js.arcgis.com/3.8/js/dojo/dijit'
 		}]
 	},
 
