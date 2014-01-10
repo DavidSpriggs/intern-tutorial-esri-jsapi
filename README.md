@@ -38,13 +38,13 @@ http://<path to the tutorial>/intern-tutorial-esri-jsapi/node_modules/intern-gee
 
 * you will need to have your console open as this is where the output from intern tests are displayed when using the browser runner (client.html). It should look something like this:
 
-![Console output](consoleOutput.jpg) 
+![Console output](consoleOutput.jpg)
 
 ## Important notes for esri jsapi integration:
 
 The key to making intern work with the esri jsapi is two fold:
 
-1. Intern 1.3 will work with esrijs 3.6 and 3.7. If your app is looking to support old IE (8 and below) you will need to also use intern-geezer. Good news is the intern config will work for both, so you can install intern and intern-geezer side by side and use both by defining different test suites.
+1. Intern 1.3 will work with esrijs 3.6 and above (latest version tested is 3.8). If your app is looking to support old IE (8 and below) you will need to also use intern-geezer. Good news is the intern config will work for both, so you can install intern and intern-geezer side by side and use both by defining different test suites.
 
 2. Defining the intern loader to work with the esri jsapi. Intern uses a local copy of dojo core. As such you need to tell it where to find the esri jsapi. Do this in your intern config file:
 
@@ -62,16 +62,16 @@ loader: {
 			location: 'gis'
 		}, {
 			name: 'esri',
-			location: 'http://js.arcgis.com/3.7/js/esri'
+			location: 'http://js.arcgis.com/3.8/js/esri'
 		}, {
 			name: 'dojo',
-			location: 'http://js.arcgis.com/3.7/js/dojo/dojo'
+			location: 'http://js.arcgis.com/3.8/js/dojo/dojo'
 		}, {
 			name: 'dojox',
-			location: 'http://js.arcgis.com/3.7/js/dojo/dojox'
+			location: 'http://js.arcgis.com/3.8/js/dojo/dojox'
 		}, {
 			name: 'dijit',
-			location: 'http://js.arcgis.com/3.7/js/dojo/dijit'
+			location: 'http://js.arcgis.com/3.8/js/dojo/dijit'
 		}]
 	}
 ```
