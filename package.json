@@ -3,6 +3,7 @@
 	"version": "0.1.0",
 	"devDependencies": {
 		"grunt": "*",
-		"intern": "*"
+		"intern": "*",
+		"selenium-server": "2.38.0"
 	}
 }
