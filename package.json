@@ -4,6 +4,7 @@
 	"devDependencies": {
 		"grunt": "*",
 		"intern": "*",
+		"intern-geezer": "*",
 		"selenium-server": "2.38.0"
 	}
 }
