@@ -64,6 +64,15 @@ loader: {
 			name: 'esri',
 			location: 'http://js.arcgis.com/3.8/js/esri'
 		}, {
+			name: 'dgrid',
+			location: 'http://js.arcgis.com/3.8/js/dgrid'
+		}, {
+			name: 'put-selector',
+			location: 'http://js.arcgis.com/3.8/js/put-selector'
+		}, {
+			name: 'xstyle',
+			location: 'http://js.arcgis.com/3.8/js/xstyle'
+		}, {
 			name: 'dojo',
 			location: 'http://js.arcgis.com/3.8/js/dojo/dojo'
 		}, {
