@@ -91,6 +91,22 @@ You also need to add the locations to your custom modules you want to load and t
 
 1. Intern-geezer only supports ```intern/chai!assert```. When using regular intern, you can take advantage of ```intern/chai!expect``` and ```intern/chai!should```.
 
+## Notes for getting selenium server running
+The simplest way to install selenium server is with homebrew. If you dont have [brew](http://brew.sh), install it first then:
+```
+$ brew update
+$ brew doctor
+$ brew install selenium-server-standalone chromedriver
+```
+to run selenium:
+```
+$ java -jar /usr/local/opt/selenium-server-standalone/libexec/selenium-server-standalone-2.40.0.jar -p 4444
+```
+Then to run your tests:
+```
+$ node node_modules/intern/runner.js config=tests/intern_.js
+```
+
 ## Included tests
 
 1. ```tests\hello.js ``` This test comes from Colins tutorial and is very simple, the hello world of intern.
