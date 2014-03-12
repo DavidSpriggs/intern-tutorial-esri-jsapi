@@ -104,7 +104,7 @@ $ java -jar /usr/local/opt/selenium-server-standalone/libexec/selenium-server-st
 ```
 Then to run your tests:
 ```
-$ node node_modules/intern/runner.js config=tests/intern_.js
+$ node node_modules/intern/runner.js config=tests/intern.js
 ```
 Notes:
 You will want to have a seperate config for selenium vs sauce labs. In your config set:
