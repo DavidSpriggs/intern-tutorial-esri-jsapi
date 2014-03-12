@@ -106,6 +106,12 @@ Then to run your tests:
 ```
 $ node node_modules/intern/runner.js config=tests/intern_.js
 ```
+Notes:
+You will want to have a seperate config for selenium vs sauce labs. In your config set:
+
+1. turn "useSauceConnect" to false
+2. set "capabilities" to whatever Selenium version you're running (the project linked above puts you on 2.40.0, etc)
+3. update the environments section for browsers your local selenium actually supports. I used {browserName: 'chrome'} etc.
 
 ## Included tests
 
