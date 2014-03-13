@@ -102,6 +102,8 @@ to run selenium:
 ```
 $ java -jar /usr/local/opt/selenium-server-standalone/libexec/selenium-server-standalone-2.40.0.jar -p 4444
 ```
+Note: you may need to explor the `/usr/local/opt/selenium-server-standalone` folder for the jar location and name.
+
 Then to run your tests:
 ```
 $ node node_modules/intern/runner.js config=tests/intern.js
