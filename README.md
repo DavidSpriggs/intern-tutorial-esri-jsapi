@@ -10,6 +10,7 @@ For a fast start running my example tests, follow these steps:
 * Clone or download this repo.
 * We are going to run our tests with a browser so move or copy the tutorial to a web accessible folder. We will be using the browser test runner so intern needs to be served via a web server to avoid any cross domain errors.
 * If you don't have node installed, [install](http://nodejs.org/) it.
+* To run tests in selenium, read the notes in the seleneum section.
 
 ### Step 2:
 * Install intern in the root of the project:
