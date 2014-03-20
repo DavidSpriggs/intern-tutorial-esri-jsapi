@@ -132,3 +132,6 @@ You will want to have a seperate config for selenium vs sauce labs. In your conf
 Intern has docs located in the [wiki](https://github.com/theintern/intern/wiki) of the intern repo. Read them. While not comprehensive it does outline everything needed.
 
 Chai doc can be found [here](http://chaijs.com/api/).
+
+## Links
+[lots of goodies](https://gist.github.com/dylans/94252f74f51e9b0102ac)
