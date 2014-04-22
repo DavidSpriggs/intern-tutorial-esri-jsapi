@@ -1,10 +1,11 @@
 {
-	"name": "intern-esri",
-	"version": "0.1.0",
-	"devDependencies": {
-		"grunt": "*",
-		"intern": "*",
-		"intern-geezer": "*",
-		"selenium-server": "2.38.0"
-	}
+  "name": "intern-esri",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "*",
+    "intern": "*",
+    "intern-geezer": "*",
+    "selenium-server": "2.38.0",
+    "grunt-contrib-watch": "~0.6.1"
+  }
 }
