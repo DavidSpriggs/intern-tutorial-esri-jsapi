@@ -13,8 +13,8 @@ define([
         // before the suite starts
         setup: function() {
             // create a map div in the body, load esri css, and create the map for our tests
-            domConstruct.place('<link rel="stylesheet" type="text/css" href="//js.arcgis.com/3.8/js/dojo/dijit/themes/claro/claro.css">', win.doc.getElementsByTagName("head")[0], 'last');
-            domConstruct.place('<link rel="stylesheet" type="text/css" href="//js.arcgis.com/3.8/js/esri/css/esri.css">', win.doc.getElementsByTagName("head")[0], 'last');
+            domConstruct.place('<link rel="stylesheet" type="text/css" href="//js.arcgis.com/3.10/js/dojo/dijit/themes/claro/claro.css">', win.doc.getElementsByTagName("head")[0], 'last');
+            domConstruct.place('<link rel="stylesheet" type="text/css" href="//js.arcgis.com/3.10/js/esri/css/esri.css">', win.doc.getElementsByTagName("head")[0], 'last');
             domConstruct.place('<div id="map" style="width:300px;height:200px;" class="claro"></div>', win.body(), 'only');
 
             map = new Map("map", {
