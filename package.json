@@ -1,11 +1,15 @@
 {
-  "name": "intern-esri",
+  "name": "intern-tutorial-esri-jsapi",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DavidSpriggs/intern-tutorial-esri-jsapi.git"
+  },
   "version": "0.1.0",
   "devDependencies": {
     "grunt": "*",
-    "intern": "*",
-    "intern-geezer": "*",
-    "selenium-server": "2.38.0",
-    "grunt-contrib-watch": "~0.6.1"
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-esri-slurp": "^0.6.3",
+    "intern": "^2.0.3",
+    "selenium-server": "2.38.0"
   }
 }

@@ -13,20 +13,32 @@ For a fast start running my example tests, follow these steps:
 * To run tests in selenium, read the notes in the seleneum section.
 
 ### Step 2:
-* Install intern in the root of the project:
+* Install intern, grunt and other dev dependencies with npm:
 
 ```bash
 cd <path to the tutorial>
-npm install intern
+npm install
 ```
 and if you wish (to support old IE, optional, see below):
 ```bash
 npm install intern-geezer
 ```
 
+### Step 3:
+* Download a local copy of Dojo and dependencies:
+```bash
+bower install
+```
+
+### Step 4:
+* Download a local copy of the AMD build of the ArcGIS API for JavaScript:
+```bash
+grunt slurp
+```
+
 * Thats it! your'e done!
 
-### Step 3:
+### Step 5:
 * Lets run the tests I provided in this tutorial, open a browser and point it here:
 
 ```bash
@@ -45,45 +57,45 @@ http://<path to the tutorial>/intern-tutorial-esri-jsapi/node_modules/intern-gee
 
 The key to making intern work with the esri jsapi is two fold:
 
-1. Intern 1.3 will work with esrijs 3.6 and above (latest version tested is 3.8). If your app is looking to support old IE (8 and below) you will need to also use intern-geezer. Good news is the intern config will work for both, so you can install intern and intern-geezer side by side and use both by defining different test suites.
+1. Downloading a local copy of the Esri JSAPI. Intern 1.3 will work with esrijs 3.6 and above (latest version tested is 3.10). If your app is looking to support old IE (8 and below) you will need to also use intern-geezer. Good news is the intern config will work for both, so you can install intern and intern-geezer side by side and use both by defining different test suites.
 
 2. Defining the intern loader to work with the esri jsapi. Intern uses a local copy of dojo core. As such you need to tell it where to find the esri jsapi. Do this in your intern config file:
 
 ```javascript
 loader: {
-        // Packages that should be registered with the loader in each testing environment
-        packages: [{
-			name: 'tests',
-			location: 'tests'
-		},{
-			name: 'app',
-			location: 'app'
-		}, {
-			name: 'gis',
-			location: 'gis'
-		}, {
-			name: 'esri',
-			location: 'http://js.arcgis.com/3.8/js/esri'
-		}, {
-			name: 'dgrid',
-			location: 'http://js.arcgis.com/3.8/js/dgrid'
-		}, {
-			name: 'put-selector',
-			location: 'http://js.arcgis.com/3.8/js/put-selector'
-		}, {
-			name: 'xstyle',
-			location: 'http://js.arcgis.com/3.8/js/xstyle'
-		}, {
-			name: 'dojo',
-			location: 'http://js.arcgis.com/3.8/js/dojo/dojo'
-		}, {
-			name: 'dojox',
-			location: 'http://js.arcgis.com/3.8/js/dojo/dojox'
-		}, {
-			name: 'dijit',
-			location: 'http://js.arcgis.com/3.8/js/dojo/dijit'
-		}]
-	}
+  // Packages that should be registered with the loader in each testing environment
+	packages: [{
+		name: 'tests',
+		location: 'tests'
+	}, {
+		name: 'app',
+		location: 'app'
+	}, {
+		name: 'gis',
+		location: 'gis'
+	}, {
+		name: 'esri',
+		location: 'esri'
+	}, {
+		name: 'dgrid',
+		location: 'dgrid'
+	}, {
+		name: 'put-selector',
+		location: 'put-selector'
+	}, {
+		name: 'xstyle',
+		location: 'xstyle'
+	}, {
+		name: 'dojo',
+		location: 'dojo'
+	}, {
+		name: 'dojox',
+		location: 'dojox'
+	}, {
+		name: 'dijit',
+		location: 'dijit'
+	}]
+}
 ```
 
 You also need to add the locations to your custom modules you want to load and test. In the above example 'app' and 'gis' is where we have some modules to test. Due to an quirk in the dojo loader, you will also need to register the 'tests' folder as a package, no biggie.

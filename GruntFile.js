@@ -8,6 +8,15 @@ module.exports = function(grunt) {
                 }
             }
         },
+        esri_slurp: {
+            dev: {
+                options: {
+                    version: '3.10',
+                    packageLocation: 'esri',
+                    beautify: true
+                }
+            }
+        },
         watch: {
             all: {
                 options: { livereload: true },
@@ -19,6 +28,10 @@ module.exports = function(grunt) {
     // Loading using a local copy
     grunt.loadNpmTasks('intern');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-esri-slurp');
+
+    // download Esri JSAPI
+    grunt.registerTask('slurp', ['esri_slurp']);
 
     // Register a test task
     grunt.registerTask('test', ['intern']);
