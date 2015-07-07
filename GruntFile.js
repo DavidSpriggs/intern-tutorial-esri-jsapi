@@ -9,12 +9,14 @@ module.exports = function(grunt) {
             }
         },
         esri_slurp: {
+			options: {
+                version: '3.13'
+            },
             dev: {
                 options: {
-                    version: '3.10',
-                    packageLocation: 'esri',
                     beautify: true
-                }
+                },
+                dest: 'esri'
             }
         },
         watch: {

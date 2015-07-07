@@ -8,7 +8,7 @@
   "devDependencies": {
     "grunt": "*",
     "grunt-contrib-watch": "~0.6.1",
-    "grunt-esri-slurp": "^0.6.3",
+    "grunt-esri-slurp": "^1.4.7",
     "intern": "^2.0.3",
     "selenium-server": "2.38.0"
   }
